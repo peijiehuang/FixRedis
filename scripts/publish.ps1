@@ -10,5 +10,6 @@ $version = $versionProps.Project.PropertyGroup.Version
 $releasePath = Join-Path $projectRoot 'artifacts\release'
 New-Item -ItemType Directory -Path $releasePath -Force | Out-Null
 Copy-Item -LiteralPath (Join-Path $publishPath 'FixRedis.WinForms.exe') -Destination (Join-Path $releasePath "FixRedis-v$version-win-x64.exe")
-Copy-Item -LiteralPath (Join-Path $projectRoot 'docs\recovery.md') -Destination (Join-Path $releasePath '修复与备份说明.md')
+# Release 附件使用英文文件名，避免上传时被 GitHub 归一化为 default.md。
+Copy-Item -LiteralPath (Join-Path $projectRoot 'docs\recovery.md') -Destination (Join-Path $releasePath 'FixRedis-Recovery-Guide.md')
 Write-Output "发布完成：$publishPath"

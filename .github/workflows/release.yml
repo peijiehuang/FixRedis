@@ -39,4 +39,4 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create $env:GITHUB_REF_NAME "artifacts/release/FixRedis-$env:GITHUB_REF_NAME-win-x64.exe" "artifacts/release/修复与备份说明.md" --title "FixRedis $($env:GITHUB_REF_NAME.ToUpperInvariant())" --notes-file CHANGELOG.md --verify-tag
+          gh release create $env:GITHUB_REF_NAME "artifacts/release/FixRedis-$env:GITHUB_REF_NAME-win-x64.exe" "artifacts/release/FixRedis-Recovery-Guide.md" --title "FixRedis $($env:GITHUB_REF_NAME.ToUpperInvariant())" --notes-file CHANGELOG.md --verify-tag
