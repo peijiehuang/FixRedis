@@ -1,0 +1,15 @@
+**/bin/
+**/obj/
+artifacts/
+.vs/
+*.user
+out/
+*.suo
+*.log
+*.rdb
+*.aof
+*.dmp
+*.fixredis-quarantine-*
+.fixredis-stage-*
+.env
+.env.*
